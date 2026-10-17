@@ -10,6 +10,7 @@ public class RegularRider extends Rider{
      * References constructor of abstract parent class Rider.
      */
     public RegularRider(){
+        //Call parent class constructor with rate reduction to apply
         super(BigDecimal.valueOf(0));
     }
 }

@@ -25,6 +25,7 @@ public abstract class Rider {
      * @param rateReduction The rate reduction, given in BigDecimal, applied to the user
      */
     final void setRateReduction(BigDecimal rateReduction){
+        //Get the Rider object's rate reduction value, in BigDecimal
         this.rateReduction = rateReduction;
     }
 
@@ -33,6 +34,7 @@ public abstract class Rider {
      * @return The rate reduction value, in BigDecimal, of the Rider
      */
     BigDecimal getRateReduction(){
+        //Get the Rider object's rate reduction value, in BigDecimal
         return this.rateReduction;
     }
 }

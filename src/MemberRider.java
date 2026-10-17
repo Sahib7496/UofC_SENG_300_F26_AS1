@@ -10,6 +10,7 @@ public class MemberRider extends Rider {
      * @param rateReduction The rate reduction to apply to the MemberRider object
      */
     public MemberRider(BigDecimal rateReduction){
+        //Call parent class constructor with rate reduction to apply
         super(rateReduction);
     }
 }
