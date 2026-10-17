@@ -1,16 +1,37 @@
+//Imported BigDecimal to handle financial rate calculations without dealing with floating point limits
 import java.math.BigDecimal;
 
+/**
+ * Abstract class containing the attributes inherited by and shared amongst Rider subclasses
+ */
 public abstract class Rider {
+    /**
+     * The percentage to subtract from a Rider's fare charge.
+     * Value type of BigDecimal
+     */
     protected BigDecimal rateReduction;
 
+    /**
+     * Constructor called during Rider subclass object initialization
+     * @param rateReduction The rate reduction, given in BigDecimal, applied to the Rider
+     */
     protected Rider(BigDecimal rateReduction){
+        //setRateReduction is final, so it can be called in a constructor
         this.setRateReduction(rateReduction);
     }
 
-    protected final void setRateReduction(BigDecimal rateReduction){
+    /**
+     * Sets the rate reduction of the Rider
+     * @param rateReduction The rate reduction, given in BigDecimal, applied to the user
+     */
+    final void setRateReduction(BigDecimal rateReduction){
         this.rateReduction = rateReduction;
     }
 
+    /**
+     * Gets the rate reduction of the Rider
+     * @return The rate reduction value, in BigDecimal, of the Rider
+     */
     BigDecimal getRateReduction(){
         return this.rateReduction;
     }
