@@ -1,0 +1,13 @@
+package display;
+
+public enum MessageKey {
+    VEHICLE_UNLOCKED,
+    VEHICLE_NOT_AVAILABLE,
+    LOW_BATTERY,
+    PAYMENT_NOT_ALLOWED,
+    PAYMENT_DECLINED,
+    STATION_FULL,
+    VEHICLE_NOT_LOCKED,
+    TRIP_ENDED,
+    ISSUE_REPORTED
+}
