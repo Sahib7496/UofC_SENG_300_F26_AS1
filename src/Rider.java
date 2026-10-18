@@ -6,7 +6,7 @@ import java.util.HashSet;
 /**
  * Abstract class containing the attributes inherited by and shared amongst Rider subclasses
  */
-public abstract class Rider {
+public abstract class Rider extends User {
     /**
      * The percentage to subtract from a Rider's fare charge.
      * Value type of BigDecimal
@@ -16,7 +16,8 @@ public abstract class Rider {
      * Constructor called during Rider subclass object initialization
      * @param rateReduction The rate reduction, given in BigDecimal, applied to the Rider
      */
-    protected Rider(BigDecimal rateReduction){
+    protected Rider(String userID, BigDecimal rateReduction){
+        super(userID);
         //setRateReduction is final, so it can be called in a constructor
         this.setRateReduction(rateReduction);
     }

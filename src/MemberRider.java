@@ -9,8 +9,8 @@ public class MemberRider extends Rider {
      * References constructor of abstract parent class Rider.
      * @param rateReduction The rate reduction to apply to the MemberRider object
      */
-    public MemberRider(BigDecimal rateReduction){
+    public MemberRider(String userID, BigDecimal rateReduction){
         //Call parent class constructor with rate reduction to apply
-        super(rateReduction);
+        super(userID, rateReduction);
     }
 }
