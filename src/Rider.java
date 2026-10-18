@@ -1,5 +1,7 @@
 //Imported BigDecimal to handle financial rate calculations without dealing with floating point limits
 import java.math.BigDecimal;
+//Import HashSet for containing PaymentMethods per Rider
+import java.util.HashSet;
 
 /**
  * Abstract class containing the attributes inherited by and shared amongst Rider subclasses
@@ -10,7 +12,10 @@ public abstract class Rider {
      * Value type of BigDecimal
      */
     protected BigDecimal rateReduction;
-
+    /**
+     * An unordered set of payment methods that the Rider has
+     */
+    protected HashSet<PaymentMethod> paymentMethods;
     /**
      * Constructor called during Rider subclass object initialization
      * @param rateReduction The rate reduction, given in BigDecimal, applied to the Rider
