@@ -13,10 +13,6 @@ public abstract class Rider {
      */
     protected BigDecimal rateReduction;
     /**
-     * An unordered set of payment methods that the Rider has
-     */
-    protected HashSet<PaymentMethod> paymentMethods;
-    /**
      * Constructor called during Rider subclass object initialization
      * @param rateReduction The rate reduction, given in BigDecimal, applied to the Rider
      */
