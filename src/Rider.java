@@ -8,7 +8,7 @@ import java.util.HashSet;
  */
 public abstract class Rider extends User {
     /**
-     * The percentage to subtract from a Rider's fare charge.
+     * The amount to subtract from a Rider's fare charge from the range [0,1], which maps to a [0%, 100%] discount from the charge.
      * Value type of BigDecimal
      */
     protected BigDecimal rateReduction;
@@ -16,8 +16,8 @@ public abstract class Rider extends User {
      * Constructor called during Rider subclass object initialization
      * @param rateReduction The rate reduction, given in BigDecimal, applied to the Rider
      */
-    protected Rider(String userID, BigDecimal rateReduction){
-        super(userID);
+    protected Rider(String userID, String email, BigDecimal rateReduction){
+        super(userID, email);
         //setRateReduction is final, so it can be called in a constructor
         this.setRateReduction(rateReduction);
     }

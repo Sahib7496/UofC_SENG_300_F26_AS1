@@ -1,8 +1,8 @@
 abstract public class User {
     /**
-     * User ID, of type string, associated with the user
+     * User ID, of type string, associated with the user upon creation
      */
-    private String userID;
+    private final String userID;
     /**
      * Email address of the user, given as a string
      */
@@ -15,6 +15,30 @@ abstract public class User {
      */
     protected User(String userID, String email){
         this.userID = userID;
+        this.email = email;
+    }
+
+    /**
+     * Returns a string representing the current user's user ID
+     * @return The user ID of the User subclass object
+     */
+    String getUserID(){
+        return this.userID;
+    }
+
+    /**
+     * Returns a string of the current user's email address
+     * @return Email address of the User subclass object
+     */
+    String getEmail(){
+        return this.email;
+    }
+
+    /**
+     * Set the email address of the current user
+     * @param email The new email address to be set to the user
+     */
+    void setEmail(String email){
         this.email = email;
     }
 
