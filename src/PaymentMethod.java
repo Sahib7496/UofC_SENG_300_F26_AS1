@@ -1,7 +1,15 @@
 import java.util.Objects;
 
 public class PaymentMethod {
-    protected PaymentType paymentType;
+    /**
+     * PaymentType (enum) of the PaymentMethod object
+     * Set upon PaymentMethod object initialization, and cannot be overwritten afterwards
+     */
+    protected final PaymentType paymentType;
+
+    public PaymentMethod(PaymentType paymentType){
+        this.paymentType = paymentType;
+    }
 
     /**
      * Compares two PaymentMethod objects for equality via PaymentType
@@ -36,5 +44,13 @@ public class PaymentMethod {
     @Override
     public int hashCode(){
         return Objects.hash(paymentType);
+    }
+
+    /**
+     * Get the payment type (enum) of the payment method
+     * @return PaymentType, of type Enum, of the payment method
+     */
+    PaymentType getPaymentType(){
+        return this.paymentType;
     }
 }
