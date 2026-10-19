@@ -2,11 +2,17 @@ public abstract class Vehicle {
 
     private final String vehicleID;
     private int batteryLevel;
+    private long rideStartTime;
+    private VehicleStatus vehicleStatus;
+    private RideDepositHold rideDepositHold;
 
     // Constructor for the Vehicle
     public Vehicle(String vehicleID, int batteryLevel) {
         this.vehicleID = vehicleID;
         this.batteryLevel = batteryLevel;
+        this.rideStartTime = 0; // 0 by default
+        this.vehicleStatus = VehicleStatus.AVAILABLE; // a vehicle is available by default
+        this.rideDepositHold = null;
     }
 
     /**
@@ -15,17 +21,35 @@ public abstract class Vehicle {
      */
     public abstract boolean isRentable();
 
-    // Getter methods for the vehicleID and batteryLevel
+    // Getter methods for the vehicleID, batteryLevel, rideDepositHold, rideStartTime, vehicleStatus
     public String getVehicleID() {
         return vehicleID;
     }
     public int getBatteryLevel() {
         return batteryLevel;
     }
+    public RideDepositHold getRideDepositHold(){
+        return rideDepositHold;
+    }
+    public long getRideStartTimeUnix() {
+        return rideStartTime;
+    }
+    public VehicleStatus getVehicleStatus(){
+        return vehicleStatus;
+    }
 
-    // Setter for battery level
+    // Setter for battery level, rideDepositHold, rideStartTime
     public void setBatteryLevel(int batteryLevel) {
         this.batteryLevel = batteryLevel;
+    }
+    public void setRideDepositHold(RideDepositHold rideDepositHold){
+        this.rideDepositHold = rideDepositHold;
+    }
+    public void setRideStartTime(long rideStartTime) {
+        this.rideStartTime = rideStartTime;
+    }
+    public void setVehicleStatus(VehicleStatus vehicleStatus){
+        this.vehicleStatus = vehicleStatus;
     }
 }
 
