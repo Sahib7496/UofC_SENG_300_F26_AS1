@@ -1,3 +1,6 @@
+///
+/// TEMPORARY INTERFACE
+///
 import java.util.List;
 
 public interface StationZone {

@@ -5,7 +5,7 @@ public class Transaction {
         return PaymentClient.charge(depositHold.getGatewayID(), amount);
     }
 
-    public static boolean refund(String gatewayID){
-        return PaymentClient.refund(gatewayID);
+    public static void refund(String gatewayID){
+        PaymentClient.refund(gatewayID);
     }
 }
