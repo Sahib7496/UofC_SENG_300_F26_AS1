@@ -2,7 +2,7 @@ public abstract class Vehicle {
 
     private final String vehicleID;
     private int batteryLevel;
-    private long rideStartTime;
+    private long rideStartTimeUnix;
     private VehicleStatus vehicleStatus;
     private RideDepositHold rideDepositHold;
 
@@ -10,7 +10,7 @@ public abstract class Vehicle {
     public Vehicle(String vehicleID, int batteryLevel) {
         this.vehicleID = vehicleID;
         this.batteryLevel = batteryLevel;
-        this.rideStartTime = 0; // 0 by default
+        this.rideStartTimeUnix = 0; // 0 by default
         this.vehicleStatus = VehicleStatus.AVAILABLE; // a vehicle is available by default
         this.rideDepositHold = null;
     }
@@ -32,7 +32,7 @@ public abstract class Vehicle {
         return rideDepositHold;
     }
     public long getRideStartTimeUnix() {
-        return rideStartTime;
+        return rideStartTimeUnix;
     }
     public VehicleStatus getVehicleStatus(){
         return vehicleStatus;
@@ -45,8 +45,8 @@ public abstract class Vehicle {
     public void setRideDepositHold(RideDepositHold rideDepositHold){
         this.rideDepositHold = rideDepositHold;
     }
-    public void setRideStartTime(long rideStartTime) {
-        this.rideStartTime = rideStartTime;
+    public void setRideStartTimeUnix(long rideStartTime) {
+        this.rideStartTimeUnix = rideStartTime;
     }
     public void setVehicleStatus(VehicleStatus vehicleStatus){
         this.vehicleStatus = vehicleStatus;
