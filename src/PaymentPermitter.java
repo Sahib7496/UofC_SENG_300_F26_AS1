@@ -1,10 +1,10 @@
-import java.math.BigDecimal;
-
 public class PaymentPermitter {
-    private boolean isPaymentTypeAllowed(PaymentType paymentType, Zone zone) {
-         return zone.getPaymentTypes().contains(paymentType);
-    }
-    public static void charge(PaymentMethod paymentMethod, BigDecimal amount){
-
+    public static boolean validateRideChargeHold(PaymentMethod paymentMethod, Vehicle vehicle, StationZone stationZone){
+        if (stationZone.getPaymentTypes().contains(paymentMethod.getPaymentType())){
+            RideDepositHold rideDepositHold = new RideDepositHold(paymentMethod.getAssignedUser(), vehicle);
+            return true;
+        } else {
+            return false;
+        }
     }
 }

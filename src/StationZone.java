@@ -1,9 +1,6 @@
-///
-/// TEMPORARY INTERFACE
-///
 import java.util.List;
 
-public interface Zone {
+public interface StationZone {
     void setLogo(Logo logo);
     void setBrandColour(BrandColor brandColor);
     void addPaymentType(PaymentType paymentType);

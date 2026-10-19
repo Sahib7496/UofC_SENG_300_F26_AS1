@@ -22,5 +22,8 @@ public class PaymentMethod {
         return this.paymentType;
     }
 
+    User getAssignedUser(){
+        return this.assignedUser;
+    }
 
 }
