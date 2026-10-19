@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -8,11 +9,11 @@ public class Station{
     private final List<Vehicle> dockedVehicles;
 
     // Constructor
-    public Station(String station_id, String stationZone, String stationName, String stationZoneID, String stationId, String stationName1, String stationZoneId, int maxDockingPoints){
+    public Station(String stationId, String stationZoneId, int maxDockingPoints){
         this.stationId = stationId;
         this.stationZoneId = stationZoneId;
         this.maxDockingPoints = maxDockingPoints;
-        this.dockedVehicles = new List<Vehicle>();
+        this.dockedVehicles = new ArrayList<>();
     }
 
     // Public getters for accessing information about the station
