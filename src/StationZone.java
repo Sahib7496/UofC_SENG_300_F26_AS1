@@ -18,7 +18,7 @@ public class StationZone {
     }
 
     // Setter method for brandColor
-    public void setBrandColor(){
+    public void setBrandColor(BrandColor brandColor){
         this.brandColor = brandColor;
     }
 
@@ -37,5 +37,23 @@ public class StationZone {
         return Collections.unmodifiableList(allowedPaymentTypes);
     }
 
+    /**
+     * add a payment type to the allowed payment types without allowing duplicates or null values.
+     * @param paymentType payment type to be added
+     */
+    public void addPaymentType(PaymentType paymentType){
+        if (paymentType != null &&  !allowedPaymentTypes.contains(paymentType)) {
+            allowedPaymentTypes.add(paymentType);
+        }
+    }
 
+    /**
+     * remove a pre-existing payment type from the payment types
+     * @param paymentType payment type to be removed.
+     */
+    public void removePaymentType(PaymentType paymentType){
+        if (allowedPaymentTypes.contains(paymentType)) {
+            allowedPaymentTypes.remove(paymentType);
+        }
+    }
 }
