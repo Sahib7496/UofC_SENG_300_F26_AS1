@@ -5,6 +5,8 @@ public abstract class Vehicle {
     private long rideStartTimeUnix;
     private VehicleStatus vehicleStatus;
     private RideDepositHold rideDepositHold;
+    private double vehicleLatitude;
+    private double vehicleLongitude;
 
     // Constructor for the Vehicle
     public Vehicle(String vehicleID, int batteryLevel) {
@@ -13,6 +15,8 @@ public abstract class Vehicle {
         this.rideStartTimeUnix = 0; // 0 by default
         this.vehicleStatus = VehicleStatus.AVAILABLE; // a vehicle is available by default
         this.rideDepositHold = null;
+        this.vehicleLatitude = vehicleLatitude;
+        this.vehicleLongitude = vehicleLongitude;
     }
 
     /**
@@ -21,7 +25,7 @@ public abstract class Vehicle {
      */
     public abstract boolean isRentable();
 
-    // Getter methods for the vehicleID, batteryLevel, rideDepositHold, rideStartTime, vehicleStatus
+    // Getter methods for the vehicleID, batteryLevel, rideDepositHold, rideStartTime, vehicleStatus, vehicleLatitude, vehicleLongitude
     public String getVehicleID() {
         return vehicleID;
     }
@@ -37,8 +41,14 @@ public abstract class Vehicle {
     public VehicleStatus getVehicleStatus(){
         return vehicleStatus;
     }
+    public double getVehicleLatitude() {
+        return vehicleLatitude;
+    }
+    public double getVehicleLongitude() {
+        return vehicleLongitude;
+    }
 
-    // Setter for battery level, rideDepositHold, rideStartTime
+    // Setter for battery level, rideDepositHold, rideStartTimeUnix, vehicleStatus, vehicleLatitude, vehicleLongitude
     public void setBatteryLevel(int batteryLevel) {
         this.batteryLevel = batteryLevel;
     }
@@ -50,6 +60,12 @@ public abstract class Vehicle {
     }
     public void setVehicleStatus(VehicleStatus vehicleStatus){
         this.vehicleStatus = vehicleStatus;
+    }
+    public void setVehicleLatitude(double vehicleLatitude) {
+        this.vehicleLatitude = vehicleLatitude;
+    }
+    public void setVehicleLongitude(double vehicleLongitude) {
+        this.vehicleLongitude = vehicleLongitude;
     }
 }
 
