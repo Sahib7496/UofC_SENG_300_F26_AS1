@@ -4,14 +4,14 @@ import java.util.List;
 
 public class Station{
     private final String stationId;
-    private final String stationZoneId;
+    private final StationZone stationZone;
     private final int maxDockingPoints;
     private final List<Vehicle> dockedVehicles;
 
     // Constructor
-    public Station(String stationId, String stationZoneId, int maxDockingPoints){
+    public Station(String stationId, StationZone stationZone, int maxDockingPoints){
         this.stationId = stationId;
-        this.stationZoneId = stationZoneId;
+        this.stationZone = stationZone;
         this.maxDockingPoints = maxDockingPoints;
         this.dockedVehicles = new ArrayList<>();
     }
