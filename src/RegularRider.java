@@ -9,8 +9,8 @@ public class RegularRider extends Rider{
      * Constructor called during Rider object initialization.
      * References constructor of abstract parent class Rider.
      */
-    public RegularRider(String userID){
+    public RegularRider(String userID, String email){
         //Call parent class constructor with rate reduction to apply
-        super(userID, BigDecimal.valueOf(0));
+        super(userID,email, BigDecimal.valueOf(0));
     }
 }
