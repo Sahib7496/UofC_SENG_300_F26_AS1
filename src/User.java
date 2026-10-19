@@ -11,7 +11,7 @@ abstract public class User {
     /**
      * Constructor called during User subclass object initialization
      * @param userID The userID of the user
-     * @param email The email of the user
+     * @param email The email of the user, if available. Otherwise, null or empty.
      */
     protected User(String userID, String email){
         this.userID = userID;
