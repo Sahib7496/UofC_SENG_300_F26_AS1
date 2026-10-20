@@ -1,3 +1,5 @@
+package Zone;
+
 public class BrandColor {
     private final String hexCode;
 

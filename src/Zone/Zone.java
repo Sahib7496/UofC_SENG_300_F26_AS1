@@ -1,6 +1,7 @@
+package Zone;
+
 import java.util.List;
 import java.util.ArrayList;
-import PaymentType; // update to correct package name
 
 public class Zone {
     private final String zoneId;
