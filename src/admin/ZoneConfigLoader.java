@@ -1,7 +1,7 @@
 package admin;
 
 import payment.PaymentType;
-import station.Zone;
+import station.StationZone;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -16,7 +16,7 @@ public class ZoneConfigLoader {
         this.configurator = configurator;
     }
 
-    public boolean loadZone(Zone zone, String fileName) {
+    public boolean loadZone(StationZone zone, String fileName) {
         String colour = null;
         String logoPath = null;
         ArrayList<PaymentType> payments = new ArrayList<>();
