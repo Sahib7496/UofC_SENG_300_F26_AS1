@@ -53,9 +53,9 @@ Gradle:
 If done correctly, all Java source code will be compiled as a .jar file
 
 Run Instructions:
-In a terminal, run the command:
+In a terminal, run the command, replacing 'gocycle' with the project name:
 ```bash
 java -jar target/gocycle-api-1.0.0.jar
 ```
-, replacing 'gocycle' with the project name to start the program
+This command will execute the .jar file and run the program.
 
