@@ -5,6 +5,7 @@ import sqlrepositories.GatewayHandler;
 import userclasses.Rider;
 import userclasses.User;
 import userclasses.UserInputRequest;
+import vehicle.Vehicle;
 
 import java.math.BigDecimal;
 
@@ -57,16 +58,23 @@ public class RideDepositHold {
             return rideCostWOSurcharge;
         }
     }
+
+    /**
+     * release the ride deposit hold based on the mode.
+     * @param rider rider associated with the deposit hold
+     * @param vehicle vehicle related to the deposit hold
+     * @param depositHoldReleaseMode mode of the deposit hold release, (charge or cancel)
+     */
     public void releaseRideDepositHold(Rider rider, Vehicle vehicle, DepositHoldReleaseMode depositHoldReleaseMode){
         this.setAsCharged();
         if (depositHoldReleaseMode.equals(DepositHoldReleaseMode.CHARGE)){
             BigDecimal amount = calculateRideCost(vehicle, rider);
             boolean success = Transaction.charge(this, amount);
             if (success){
-                vehicle.setDepositHold(null);
+                vehicle.setRideDepositHold(null);
             }
         } else {
-            vehicle.setDepositHold(null);
+            vehicle.setRideDepositHold(null);
         }
     }
 }
