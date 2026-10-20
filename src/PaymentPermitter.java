@@ -1,3 +1,5 @@
+import java.sql.Ref;
+
 public class PaymentPermitter {
     public static boolean validateRideChargeHold(PaymentMethod paymentMethod, Vehicle vehicle, StationZone stationZone){
         User user = paymentMethod.getAssignedUser();

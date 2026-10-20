@@ -1,5 +1,5 @@
 public enum SQLDatabaseSingleton implements SQLDatabaseOperations {
-    DB();
+    db;
     private String url;
     private String user;
 
