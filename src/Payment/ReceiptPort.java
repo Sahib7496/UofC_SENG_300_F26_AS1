@@ -1,5 +1,7 @@
 package Payment;
 
+import UserClasses.User;
+
 import java.math.BigDecimal;
 
 public interface ReceiptPort {

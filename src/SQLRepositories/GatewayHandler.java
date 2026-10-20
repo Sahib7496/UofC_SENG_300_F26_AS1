@@ -1,7 +1,7 @@
 package SQLRepositories;
 
 public interface GatewayHandler {
-    public static String generateGatewayID(){
+    static String generateGatewayID(){
         return null;
     }
 }

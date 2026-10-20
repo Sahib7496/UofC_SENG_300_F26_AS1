@@ -1,5 +1,7 @@
 package SQLRepositories;
 
+import Payment.PaymentMethod;
+
 import java.awt.*;
 import java.util.List;
 

@@ -1,5 +1,8 @@
 package Payment;
 
+import UserClasses.Rider;
+import UserClasses.User;
+
 public class PaymentPermitter {
     public static boolean validateRideChargeHold(PaymentMethod paymentMethod, Vehicle vehicle, StationZone stationZone){
         User user = paymentMethod.getAssignedUser();
