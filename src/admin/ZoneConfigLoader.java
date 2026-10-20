@@ -8,6 +8,9 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * load and apply zone configuration from a file.
+ */
 public class ZoneConfigLoader {
     private ZoneConfigurator configurator;
 
@@ -16,6 +19,12 @@ public class ZoneConfigLoader {
         this.configurator = configurator;
     }
 
+    /**
+     * Load config data from a file and apply it to a specified zone
+     * @param zone the StationZone to be configured
+     * @param fileName path of the config file
+     * @return true if successfully configured the zone , false if failed.
+     */
     public boolean loadZone(StationZone zone, String fileName) {
         String colour = null;
         String logoPath = null;

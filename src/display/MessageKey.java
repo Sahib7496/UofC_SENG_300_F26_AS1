@@ -1,5 +1,8 @@
 package display;
 
+/**
+ * Enum of supported message keys
+ */
 public enum MessageKey {
     VEHICLE_UNLOCKED,
     VEHICLE_NOT_AVAILABLE,
