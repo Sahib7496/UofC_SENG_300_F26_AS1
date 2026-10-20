@@ -2,10 +2,17 @@ package display;
 
 import java.util.HashMap;
 
+/**
+ * A message catalog that manages user interface messages.
+ */
 public class MessageCatalog {
     private HashMap<MessageKey, String> english = new HashMap<>();
     private HashMap<MessageKey, String> french = new HashMap<>();
 
+    /**
+     * Create a new catalog and add all the default phrases
+     * Add translations for the supported languages (English and French).
+     */
     public MessageCatalog() {
         english.put(MessageKey.VEHICLE_UNLOCKED, "Vehicle unlocked. Enjoy your ride!");
         english.put(MessageKey.VEHICLE_NOT_AVAILABLE, "This vehicle is not available.");
@@ -28,6 +35,12 @@ public class MessageCatalog {
         french.put(MessageKey.ISSUE_REPORTED, "Merci. Ce véhicule a été mis hors service.");
     }
 
+    /**
+     * Get an appropriate message which matches the key and language.
+     * @param language Language of the expected output
+     * @param key key of the specific expected message
+     * @return string of the matching message, returns the message in English if no language is specified or if the specified language is not supported yet.
+     */
     public String getMessage(Language language, MessageKey key) {
         String message;
 

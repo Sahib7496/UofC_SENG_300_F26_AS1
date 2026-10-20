@@ -15,11 +15,13 @@ public class PaymentMethod {
      */
     private final PaymentType paymentType;
 
+    // Constructor
     public PaymentMethod(PaymentType paymentType, User assignedUser){
         this.paymentType = paymentType;
         this.assignedUser = assignedUser;
     }
 
+    // getters for the paymentType and the assignedUser
     public PaymentType getPaymentType(){
         return this.paymentType;
     }

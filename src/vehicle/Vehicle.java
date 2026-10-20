@@ -1,5 +1,7 @@
 package vehicle;
 
+import payment.RideDepositHold;
+
 public abstract class Vehicle {
 
     private final String vehicleID;
