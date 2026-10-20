@@ -7,12 +7,16 @@ public class Station{
     private final StationZone stationZone;
     private final int maxDockingPoints;
     private final List<Vehicle> dockedVehicles;
+    private final double stationLongitude;
+    private final double stationLatitude;
 
     // Constructor
-    public Station(String stationId, StationZone stationZone, int maxDockingPoints){
+    public Station(String stationId, StationZone stationZone, int maxDockingPoints, double stationLongitude, double stationLatitude) {
         this.stationId = stationId;
         this.stationZone = stationZone;
         this.maxDockingPoints = maxDockingPoints;
+        this.stationLongitude = stationLongitude;
+        this.stationLatitude = stationLatitude;
         this.dockedVehicles = new ArrayList<>();
     }
 
@@ -20,14 +24,20 @@ public class Station{
     public String getStationId() {
         return stationId;
     }
-    public String getStationZoneId() {
-        return stationZoneId;
+    public StationZone getStationZone() {
+        return stationZone;
     }
     public int getMaxDockingPoints() {
         return maxDockingPoints;
     }
     public List<Vehicle> getDockedVehicles() {
         return Collections.unmodifiableList(dockedVehicles);
+    }
+    public double getStationLongitude() {
+        return stationLongitude;
+    }
+    public double getStationLatitude() {
+        return stationLatitude;
     }
 
     /**
