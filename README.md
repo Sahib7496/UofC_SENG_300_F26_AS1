@@ -1,7 +1,10 @@
 # GoCycle System (SENG 300 Assignment 1)
 Authors:
+
 Jonathan Krisnawan - 30334242
+
 Sahib Sahota - 30241787
+
 Archit Sharma - 30248701
 
 Course: SENG 300
@@ -46,10 +49,12 @@ Maven:
 ```bash
 mvn clean package
 ```
+
 Gradle:
 ```bash
 ./gradlew clean build
 ```
+
 If done correctly, all Java source code will be compiled as a .jar file
 
 Run Instructions:
