@@ -4,6 +4,8 @@ import repositories.RideChargeRepository;
 import sqlrepositories.GatewayHandler;
 import userclasses.Rider;
 import userclasses.User;
+import userclasses.UserInputRequest;
+
 import java.math.BigDecimal;
 
 public class RideDepositHold {
@@ -24,9 +26,7 @@ public class RideDepositHold {
     public boolean getIsCharged(){
         return this.charged;
     }
-    public void getGatewayID(String gatewayID){
-        this.gatewayID = gatewayID;
-    }
+    public User getAssignedUser() {return this.user;}
 
     /**
      * Set the deposit hold as charged.
