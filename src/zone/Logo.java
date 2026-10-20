@@ -1,4 +1,4 @@
-package Zone;
+package zone;
 
 public class Logo {
     private final String filePath;

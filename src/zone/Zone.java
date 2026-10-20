@@ -1,4 +1,4 @@
-package Zone;
+package zone;
 
 import java.util.List;
 import java.util.ArrayList;
