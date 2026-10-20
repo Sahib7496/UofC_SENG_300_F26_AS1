@@ -1,3 +1,5 @@
+package vehicle;
+
 public class ElectricScooter extends Vehicle {
     /**
      * Create a new electric scooter.

@@ -1,9 +1,11 @@
+package station;
+import vehicle.Vehicle;
 import java.util.List;
 
 public class StationLocator {
     /**
      * Find the closest station to the current position of the vehicle.
-     * Use the LocationDistance object in order to calculate the distance between the 2 geographical points.
+     * Use the station.LocationDistance object in order to calculate the distance between the 2 geographical points.
      * @param vehicle vehicle used as reference to find the closest station
      * @param stations list of all stations
      * @return closest station to the vehicle from the list of stations.

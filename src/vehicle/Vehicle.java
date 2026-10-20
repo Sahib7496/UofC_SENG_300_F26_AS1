@@ -1,3 +1,5 @@
+package vehicle;
+
 public abstract class Vehicle {
 
     private final String vehicleID;
@@ -8,7 +10,7 @@ public abstract class Vehicle {
     private double vehicleLatitude;
     private double vehicleLongitude;
 
-    // Constructor for the Vehicle
+    // Constructor for the vehicle.Vehicle
     public Vehicle(String vehicleID, int batteryLevel) {
         this.vehicleID = vehicleID;
         this.batteryLevel = batteryLevel;

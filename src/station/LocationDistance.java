@@ -1,3 +1,4 @@
+package station;
 public class LocationDistance {
 
     /**

@@ -1,4 +1,6 @@
-public class PedalBike extends Vehicle{
+package vehicle;
+
+public class PedalBike extends Vehicle {
     /**
      * Create a new pedal bike.
      * @param vehicleID UID for the pedal bike

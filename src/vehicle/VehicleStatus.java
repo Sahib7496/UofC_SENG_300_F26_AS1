@@ -1,3 +1,4 @@
+package vehicle;
 public enum VehicleStatus {
     AVAILABLE,
     IN_USE,
