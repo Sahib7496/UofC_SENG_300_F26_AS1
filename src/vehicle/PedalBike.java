@@ -6,7 +6,7 @@ public class PedalBike extends Vehicle {
      * @param vehicleID UID for the pedal bike
      */
     public PedalBike(String vehicleID) {
-        super(vehicleID, 0); // default battery level is 0 because theres no battery in a pedal bike
+        super(vehicleID, -1); // default battery level is 0 because theres no battery in a pedal bike
     }
 
     /**
