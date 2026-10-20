@@ -1,4 +1,8 @@
 package vehicle;
+
+/**
+ * Enumeration of different possible vehicle statuses
+ */
 public enum VehicleStatus {
     AVAILABLE,
     IN_USE,

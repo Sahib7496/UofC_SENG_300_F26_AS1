@@ -1,4 +1,8 @@
 package station;
+import payment.PaymentType;
+import zone.BrandColor;
+import zone.Logo;
+
 import java.util.Collections;
 import java.util.List;
 
