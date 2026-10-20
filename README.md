@@ -1,7 +1,9 @@
 # GoCycle System (SENG 300 Assignment 1)
 Authors:
 Jonathan Krisnawan - 30334242
+
 Sahib Sahota - 30241787
+
 Archit Sharma - 30248701
 
 Course: SENG 300
@@ -33,6 +35,7 @@ If done correctly, a local repository will be created containing the Java files 
 3. Initialize Mail Transfer API
 In the 'sendReceipt' method under interface 'ReceiptPort', implement the Host string, Port number, and Admin email string as seperate variables, and implement the Email client commands corresponding to the chosen Mail Transfer API
 
+
 4. Implement SQLDatabase
 At the start of a program's runtime, call
 ```bash
@@ -46,10 +49,12 @@ Maven:
 ```bash
 mvn clean package
 ```
+
 Gradle:
 ```bash
 ./gradlew clean build
 ```
+
 If done correctly, all Java source code will be compiled as a .jar file
 
 Run Instructions:
